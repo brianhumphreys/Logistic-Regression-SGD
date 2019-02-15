@@ -69,6 +69,9 @@ def train(data, epochs, rate, lam):
             # print('yunk3')
             rate = 0.01
         # print("Rate: ", rate)
+
+        # this suffle portion is important as SGD is trained online and not in batches
+        random.shuffle(data)
         for point in data:
 
             model = update(model, point, rate, lam)
@@ -140,8 +143,8 @@ def extract_features(raw):
     # print(data[0]['features'])
     return data
 
-# TODO: Tune your parameters for final submission
-def submission(data):
+# TODO: Tune your parameters for final model
+def modelsgd(data):
     # Learning rate is tuned automatically in train function as more epochs pass
     return train(data, 50, 0.1, 0.5)
     

@@ -1,6 +1,6 @@
 from unittest import TestCase
 import unittest
-from sgd import logistic, dot, predict, accuracy, submission, extract_features
+from sgd import logistic, dot, predict, accuracy, modelsgd, extract_features
 from data import load_adult_train_data, load_adult_valid_data
 
 
@@ -29,7 +29,7 @@ class SGDTest(unittest.TestCase):
     def test_submission(self):
         train_data = extract_features(load_adult_train_data())
         valid_data = extract_features(load_adult_valid_data())
-        model = submission(train_data)
+        model = modelsgd(train_data)
         predictions = [predict(model, p) for p in train_data]
         print
         print

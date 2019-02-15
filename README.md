@@ -1,10 +1,10 @@
-# Logistic Regression using SGD [100 points]#
+# Logistic Regression using SGD
 (this project is a replica of a test project from Andrew Qiang Yu)
-In this assignment you will be predicting income from census data using logistic regression. Specifically, you will predict the probability that a person earns more than $50k per year.
+In this project you will be predicting income from census data using logistic regression. Specifically, you will predict the probability that a person earns more than $50k per year.
 
 [https://en.wikipedia.org/wiki/Logistic_regression](https://en.wikipedia.org/wiki/Logistic_regression)
 
-First get the assignment by running:
+First get the project by running:
     
     Download and unzip Logistic-SGD.zip
     cd Logistic-SGD
@@ -21,7 +21,7 @@ The data is in `adult.data`, it is from the Adult dataset:
 
 Note: Please use Python 2.7 for the assignment and only modify the `sgd.py` file. This is the only file you will be submitting.
 
-### Logistic Function [10 points]###
+### Logistic Function ###
 
 To perform logistic regression you have to be able to calculate the logistic function:
 
@@ -29,7 +29,7 @@ To perform logistic regression you have to be able to calculate the logistic fun
 
 Fill in the `logistic` function.
 
-### Dot Product [5 points]###
+### Dot Product ###
 
 The model you are training is just a bunch of numerical weights. To run your model on a data points you will need to take the dot product of your weights and the features for that data point and run the result through your logistic function.
 
@@ -37,18 +37,18 @@ First fill in the `dot` function to take the dot product of two vectors:
 
 [https://en.wikipedia.org/wiki/Dot_product](https://en.wikipedia.org/wiki/Dot_product)
 
-### Prediction [5 points]###
+### Prediction ###
 
 Now that you can calculate the dot product, predicting new data points should be easy! Fill in the `predict` function to run your model on a new data point. Take a look at `test.py` to see what the format for data points is.
 
 Prediction should be straightforward, to predict new points you simply multiply your model's weights by the corresponding features, sum up the result, and pass it through the logistic function. This should be easy with your dot product and logistic functions.
 
 
-### Accuracy [10 points]###
+### Accuracy ###
 
 Once you start training your model you are going to want to know how well you are doing. Modify the `accuracy` function to calculate your accuracy on a dataset given a list of data points and the associated predictions.
 
-### Train Your Model [20 points]###
+### Train Your Model ###
 
 Fill in the `train` and `update` functions to train your model! You should use logistic regression with L2 regularization where `rate` is the learning rate and `lam` is the regularization parameter.
 
@@ -83,20 +83,18 @@ While this minimizing this loss looks different than maximizing the conditional 
 
 When you run `python test.py` it will tell you your current accuracy on the training and validation set. By default these are the same dataset! To get a more accurate evaluation you can modify `data.py` to use different training and validation sets by splitting your data.
 
-### Extract Better Features [20 points]###
+### Extract Better Features ###
 
 Take a look at the feature extracting code in `extract_features`, and at the raw data in `adult.data`. Right now your model is only considering age, education, and one possible marital status.
 
 Good feature extraction is often the key to making good machine learning models. Add more feature extraction rules to help improve your model's performance. This is very open ended, be creative and find features that work well with your model.
 
 
-### Tune Your Submission [30 points]###
+### Tune Your Model ###
 
-Tune your `submission` function to train your final model. You should change your feature extraction and training code to produce the best model you can. Try different learning rates and regularization parameters, how do they compare? Often it is good to start with a high learning rate and decrease it over time, feel free to add this to your training code.
+Tune your `model` function to train your final model. You should change your feature extraction and training code to produce the best model you can. Try different learning rates and regularization parameters, how do they compare? Often it is good to start with a high learning rate and decrease it over time, feel free to add this to your training code.
 
 
-### Submitting
-1. Print out your "sgd.py" and attach it to your homework  (this is what you should turn in as a hardcopy in class).
-2. Also submit your modified "sgd.py" file to the GauchoSpace.
+
 
 
