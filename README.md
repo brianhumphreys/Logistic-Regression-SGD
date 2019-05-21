@@ -1,6 +1,8 @@
+# Background and Motivation
+This project showcases knowledge of machine learning techniques.  Logistic regression is a form of Supervised Learning and I will use it to predict Adult income.  For projects on Unsupervised and reinforcement Learning, check out my other repos.
+
 # Logistic Regression using SGD
-(this project is a replica of a test project from Andrew Qiang Yu)
-In this project you will be predicting income from census data using logistic regression. Specifically, you will predict the probability that a person earns more than $50k per year.
+In this project, I will be predicting income from census data using logistic regression. Specifically, you will predict the probability that a person earns more than $50k per year.
 
 [https://en.wikipedia.org/wiki/Logistic_regression](https://en.wikipedia.org/wiki/Logistic_regression)
 
